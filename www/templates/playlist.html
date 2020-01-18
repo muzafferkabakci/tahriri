@@ -1,0 +1,113 @@
+<ion-view   class="title title-center header-item home_bg1" view-title="صوری">
+    <ion-content>
+
+        <div ng-hide="final">
+
+            <center>
+                <div class=""><span class="badge badge-calm {{animasyon}}"  style="padding: 14px 16px;font-weight: normal;
+    font-size: 25px;margin-top: 5px; color: white;">{{soruindex+1}}</span></div>
+            </center>
+
+            <div>
+                <center>
+                    <div class="card {{animasyoncard}}" style="min-height: 150px;margin-top: 5px;box-shadow: 0 15px 12px rgba(0, 0, 0, 0.3);font-family: 'Roboto', sans-serif;">
+                        <div class="item item-text-wrap soru">
+                            <span class="sorucard" >{{sorular[soruindex].soru}}</span>
+
+                        </div>
+                    </div>
+                </center>
+
+                <div ng-hide="aciklama">
+
+                    <div class="card {{animasyon}} ">
+                        <a class="item item-text-wrap sorubutton {{buttonStyle1}} " ng-disabled="checked" ng-click="soruArtir(cevap1);" style="color: white">
+{{sorular[soruindex].cevap1}}  </a>
+                    </div>
+
+                    <div class="card {{animasyon}} ">
+                        <a class="item item-text-wrap {{buttonStyle2}} sorubutton" ng-disabled="checked" ng-click="soruArtir(cevap2);"  style="color: white">
+{{sorular[soruindex].cevap2}}  </a>
+                    </div>
+
+                    <div class="card {{animasyon}} ">
+                        <a class="item item-text-wrap {{buttonStyle3}} sorubutton" ng-disabled="checked" ng-click="soruArtir(cevap3);" style="color: white">
+{{sorular[soruindex].cevap3}}  </a>
+                    </div>
+
+                    <div class="card {{animasyon}} ">
+                        <a class="item item-text-wrap {{buttonStyle4}} sorubutton" ng-disabled="checked" ng-click="soruArtir(cevap4);"  style="color: white">
+{{sorular[soruindex].cevap4}}  </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div ng-show="aciklama">
+
+                <div class="card" style="box-shadow: 0 25px 15px rgba(0, 0, 0, 0.3);border-radius: 20px; ">
+                    <div class="item item-divider" style="background-color: #ffe230; text-align: center;font-size:25px;padding-top: 15px;
+    padding-bottom: 15px;font-family: 'Roboto', sans-serif;">
+                        {{playlists[levelId-1].kitap}} {{sorular[soruindex].sayfa}}.صحيفه
+                    </div>
+                    <div class="item item-text-wrap" style="text-align: center;font-size:25px;padding-top: 15px;
+    padding-bottom: 15px;line-height: 33px; font-family: 'Roboto', sans-serif;">
+                        {{sorular[soruindex].aciklama}}
+                    </div>
+
+                    <button class="button button-full button-balanced"  style="margin: 0px;" ng-click="digerSoru()">
+                    	<span style="font-family: 'Roboto', sans-serif;color: white;font-size:25px;">کلهجک صوری</span>
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
+        </div>
+
+        </div>
+        </div>
+
+        </div>
+
+        <div ng-show="final" style="margin-top: 40%;">
+
+            <div class="card {{skor>=7 ?'animated flip':'animated shake'}}" style="box-shadow: 0 25px 15px rgba(0, 0, 0, 0.3);border-radius: 20px; ">
+                <div class="item item-text-wrap soru" style="text-align: center;">
+                    <span class="" ng-style="{ 'color' : playlists[levelId-1].color }" style="font-size: 40px;">{{playlists[levelId-1].kitap}}</span>
+                    <div>
+
+                        <div style="font-size: 300%;">
+                            <div class="">
+                                <i class="icon ion-android-star  {{skor>=2 ?'orange':'gri'}} "></i>
+                                <i class="icon ion-android-star {{skor>=4 ?'orange':'gri'}}"></i>
+                                <i class="icon ion-android-star {{skor>=6 ?'orange':'gri'}}"></i>
+                                <i class="icon ion-android-star {{skor>=8 ?'orange':'gri'}}"></i>
+                                <i class="icon ion-android-star {{skor>=10 ?'orange':'gri'}}"></i>
+                            </div>
+
+                    
+                            <div class="fab" ng-style="{ 'background-color' : playlists[levelId-1].color }">
+                                <div class="finalScoreDisplay">{{skor}}/10</div>
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
+                </div>
+                <button class="button button-full" ng-style="{ 'background-color' : playlists[levelId-1].color }" style="margin-top:0px;margin-bottom:1px" ng-click="tekrar();skorupdate();">
+                    Tekrar Oyna
+                </button>
+                <button class="button button-full" ng-style="{ 'background-color' : playlists[levelId-1].color }" style="margin-top:0px;margin-bottom:0px" ng-click="gitKitaplar();">
+                    Kitaplar
+                </button>
+
+            </div>
+
+        </div>
+
+    </ion-content>
+</ion-view>

@@ -1,0 +1,32 @@
+<ion-view class="home_bg1" view-title="کیرش" name="login-view" >
+  <ion-content>
+
+    <div class="row " style="    margin-top: 75px;">
+      <div class="col col-100 ortala " >
+        <img class="unlem" style="width: 175px"src="img/icon.png">
+      </div>
+    </div>
+
+    <form ng-submit="doLogin()">
+      <div class="list">
+        <label class="item item-input input home_bg1">
+          <input style="color: #11c1f3;" type="text" placeholder="E-Posta" ng-model="loginData.email_address">
+        </label>
+        <label class="item item-input input home_bg1">
+          <input style="color: #11c1f3;" type="password" placeholder="Şifre" ng-model="loginData.password">
+        </label>
+        <label class="">
+          <button ng-disabled="!loginData.email_address || !loginData.password" class="button btn submitbutton"  type="submit" href="#/app/playlists">Giriş Yap</button>
+        </label>
+      </div>
+    </form>
+
+                  <div>
+          <button class="button btn submitbutton" ng-click="register()">Üye Ol!</button>
+        </div>
+      <div class="forgot-pass">
+        <a style="color: #11c1f3;" ng-click="sifremiUnuttumAc()">Şifremi Unuttum</a>
+      </div>
+
+  </ion-content>
+</ion-view>

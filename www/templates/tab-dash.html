@@ -1,0 +1,25 @@
+<ion-view  class="home_bg1" view-title="کتابلر">
+  <ion-content>
+
+
+
+    <ion-list>
+      <div class="row row-wrap row-no-padding">
+        <a ng-repeat="playlist in playlists" class="col col-50 button button-icon light animated bounceInUp" href="#/tab/playlist"ng-style="{ 'background-color' : playlist.color }" ng-click="indexle($index)" style="border: 2px solid white  !important;border-radius: 12px;">
+
+          <div style="    margin-top: 5%;
+    margin-bottom: 5%;">
+                 <i class="icon ion-play" ></i>
+
+                 <p style="color: #fff; text-align: center;font-size:25px;padding-top: 5px;
+    padding-bottom: 5px;">
+{{playlist.kitap}}
+  </p>
+  </div>
+        </a>
+      </div>
+    </ion-list>
+
+
+  </ion-content>
+</ion-view>

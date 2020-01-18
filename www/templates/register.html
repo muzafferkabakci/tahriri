@@ -1,0 +1,61 @@
+<ion-modal-view class="home_bg1 ">
+  <ion-header-bar style="background-color: #11c1f3;">
+    <div class="buttons">
+      <h1 class="title white">قید اول</h1> 
+      <button class="button button-clear icon ion-android-close button-positive" style="color: #ffffff;" ng-click="closeRegister()"></button>
+    </div>
+  </ion-header-bar>
+
+  <ion-content class="home_bg1 ">
+
+    <div class="row ">
+
+  <div class="col col-100 ortala " >
+
+<img class="unlem" style="width: 100px"src="img/icon.png">
+
+  </div>
+</div>
+
+
+<form >
+  <div class="list">
+
+    <label class="item item-input input home_bg1">
+      <input style="color: #11c1f3;" type="text" placeholder="Ad Soyad" ng-model="registerData.name_user">
+    </label>
+
+      <label class="item item-input input home_bg1 item-icon-right">
+       <i class="icon ion-alert-circled sari" ng-show="userOkey"></i>
+      <input id="username" ng-blur="checkUser()" style="color: #11c1f3;" type="text" placeholder="Kullanıcı adı" ng-model="registerData.username">
+    </label>
+
+      <label class="item item-input input home_bg1">
+      <input style="color: #11c1f3;" type="password" placeholder="Şifre" ng-model="registerData.password_user">
+    </label>
+
+    <label class="item item-input input home_bg1">
+      <input style="color: #11c1f3;" type="text" placeholder="Okul" ng-model="registerData.school">
+    </label>
+
+    <label class="item item-input input home_bg1 item-icon-right">
+      <i class="icon ion-alert-circled sari" ng-show="mailOkey"></i>
+      <input id = "mail" style="color: #11c1f3;" ng-blur="checkMail()" type="email" placeholder="E-Posta" ng-model="registerData.email_address">
+    </label>
+
+    <label class="item item-input input home_bg1 item-icon-right">
+       <i class="icon ion-alert-circled sari" ng-show="phoneOkey"></i>
+      <input id = "tel" style="color: #11c1f3;" ng-blur="checkPhone()" type="text" placeholder="Telefon" ng-model="registerData.phone_number">
+    </label>
+
+    <label>
+      <button ng-disabled="!registerData.name_user || !registerData.username || !registerData.password_user
+      || !registerData.school || !registerData.email_address || userOkey || phoneOkey || mailOkey 
+      " class="button btn submitbutton"  type="button" ng-click="doRegister()">Kayıt Ol</button>
+    </label>
+
+      </div>
+    </form>
+  </ion-content>
+</ion-modal-view>
+

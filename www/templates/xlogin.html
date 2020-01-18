@@ -1,0 +1,65 @@
+<ion-view class="home_bg1">
+  <ion-header-bar style="background-color: #11c1f3;">
+    <div class="buttons">
+      <h1 class="title white">کیرش</h1> 
+      <button class="button button-clear icon ion-android-close button-positive" style="color: #ffffff;" ng-click="closeLogin()"></button>
+    </div>
+  </ion-header-bar>
+  <ion-content class="home_bg1 ">
+
+    <div class="row " style="    margin-top: 75px;">
+      <div class="col col-100 ortala " >
+        <img class="unlem" style="width: 175px"src="img/icon.png">
+      </div>
+    </div>
+
+    <form ng-submit="doLogin()">
+      <div class="list">
+        <label class="item item-input input home_bg1">
+          <input style="color: #11c1f3;" type="text" placeholder="Kullanıcı adı" ng-model="loginData.username">
+        </label>
+        <label class="item item-input input home_bg1">
+          <input style="color: #11c1f3;" type="text" placeholder="Şifre" ng-model="loginData.password">
+        </label>
+        <label class="">
+          <button ng-disabled="!loginData.username || !loginData.password" class="button btn submitbutton"  type="submit" href="#/app/playlists">Giriş Yap</button>
+        </label>
+        <label>
+          <button class="button btn submitbutton" ng-click="register()">Üye Ol!</button>
+        </label>
+
+      </div>
+      <div class="forgot-pass">
+        <a style="color: #11c1f3;" ng-click="sifremiUnuttumAc()">Şifremi Unuttum</a>
+      </div>
+    </form>
+
+  </ion-content>
+</ion-view>
+
+
+<!--
+
+<ion-view  view-title="کتابلر">
+  <ion-content>
+
+    <ion-list>
+      <div class="row row-wrap row-no-padding">
+        <a ng-repeat="playlist in playlists" class="col col-50 button button-icon light animated bounceInUp" href="#/app/playlist"ng-style="{ 'background-color' : playlist.color }" ng-click="indexle($index)" style="border: 2px solid white  !important;border-radius: 12px;">
+
+          <div style="    margin-top: 5%;
+    margin-bottom: 5%;">
+                 <i class="icon ion-play" ></i>
+
+                 <p style="color: #fff; text-align: center;font-size:25px;padding-top: 5px;
+    padding-bottom: 5px;">
+{{playlist.kitap}}
+  </p>
+  </div>
+        </a>
+      </div>
+    </ion-list>
+
+
+  </ion-content>
+</ion-view>

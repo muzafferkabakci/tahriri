@@ -1,0 +1,419 @@
+/* Empty. Add your own CSS if you like */
+
+.sari{
+    color: #ffe230;
+}
+.btn-update {
+        margin-top: 30px !important;
+        width: 93% !important;
+        margin-left: 15px;
+    }
+    
+    #profile-bg {
+        position: fixed;
+        left: 0;
+        z-index: 2;
+        top: -3px;
+        width: 100%;
+        height: 250px;
+        background: #ef473a;
+        /* For browsers that do not support gradients */
+        background: -webkit-linear-gradient(#ef473a, #ffffff);
+        /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient(#ef473a, #ffffff);
+        /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient(#ef473a, #ffffff);
+        /* For Firefox 3.6 to 15 */
+        background: linear-gradient(#ef473a, #ffffff);
+        /* Standard syntax */
+    }
+    
+    #content {
+        position: relative;
+        margin-top: 40%;
+        background-color: white;
+        padding-top: 70px;
+    }
+    
+    #profile-info {
+        position: absolute;
+        top: -95px;
+        width: 100%;
+        z-index: 2;
+        text-align: center;
+    }
+    
+    #profile-name {
+        color: #e42112;
+        padding: 18px;
+        font-weight: 400;
+        font-size: 30px;
+    }
+    
+    #profile-description {
+        color: #888;
+    }
+    
+    #profile-description a {
+        color: #888;
+    }
+    
+    #profile-image {
+        display: block;
+        border-radius: 50%;
+        width: 128px;
+        height: 128px;
+        margin: 30px auto 0;
+        border: 2px solid #3eca39;
+    }
+    
+    #profile-image div {
+        text-align: center;
+        font-size: 70px;
+        color: #fff;
+        margin-top: 35%;
+    }
+    
+    .list-item-content {
+        padding: 5px;
+    }
+    
+    .list-item {
+        color: #666666;
+    }
+    
+    .post {
+        color: #444;
+    }
+    
+    .post-time {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        font-size: 11px;
+        color: #888;
+    }
+    
+    .post-profile-image {
+        display: inline-block;
+        vertical-align: top;
+        width: 48px;
+        height: 48px;
+        margin-right: 10px;
+    }
+    
+    .post-options {
+        position: absolute;
+        font-size: 16px;
+        right: 5px;
+        bottom: 5px;
+        color: #888;
+    }
+    
+    .nextedTab .tabs {
+        top: 0;
+        color: #fff;
+        background-color: #ef473a !important;
+    }
+    
+    .tab-content {
+        /*margin-top: 10%;
+        padding: 10% 2%;*/
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    
+    .tab-item {
+        max-width: 100%;
+    }
+    
+    .tabs-striped .tab-item.activated {
+        border-color: #fff;
+    }
+    
+    .list-item-content {
+        padding: 5px;
+    }
+    
+    .list-item {
+        color: #666666;
+    }
+    
+    .post {
+        color: #444;
+    }
+    
+    .post-time {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        font-size: 11px;
+        color: #888;
+    }
+    
+    .post-profile-image {
+        display: inline-block;
+        vertical-align: top;
+        width: 48px;
+        height: 48px;
+        margin-right: 10px;
+    }
+    
+    .post-options {
+        position: absolute;
+        font-size: 16px;
+        right: 5px;
+        bottom: 5px;
+        color: #888;
+    }
+    
+    .select-tab {
+        color: #ffffff;
+        opacity: 1;
+        font-weight: 500;
+        border-bottom: 2px solid #fff;
+    }
+    
+    .submit {
+        margin-top: 2%;
+        text-align: center;
+    }
+    
+    .nodatatxt {
+        top: 100%;
+        height: 100%;
+    }
+.sorucard{
+  font-size: 175%;
+  margin-top: 5px;
+  line-height: 33px; 
+}
+.home_bg1{
+        background: #edf7fa !important;
+}
+
+.sorubutton{
+
+    font-size: 175%;
+    font-family: 'Roboto', sans-serif;
+    text-align:center;
+    color: white;
+    line-height: 33px; 
+}
+
+.soru{
+	    text-align: center;
+}
+
+.gri{
+color:  #ededed;}
+.orange{
+    color:  #ffe230;
+}
+
+
+.white{
+    color: #fff;
+}
+
+.fab {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 10px;
+      display: block;
+      position: relative;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      color: #fff;
+      overflow: hidden;
+      transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      transition-delay: 0.2s;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    }
+
+.finalScoreDisplay{
+  text-align: center;
+  margin-top: 66px;
+  font-size: 50px;
+
+}
+
+.soru{
+      text-align: center;
+}
+
+.ortala{
+    text-align: center;
+}
+
+.unlem{
+    width:75px;
+}
+
+.input {
+ border-radius: 50px;
+ border:2px solid white !important;
+ color: #fff !important;
+ margin: 10px 0 0 0;
+ width: 250px;
+ left: 50%;
+ transform: translate(-50%, 0);
+}
+
+.btn {
+  margin: 10px 0 0 0;
+  border-radius: 50px;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 250px;
+}
+
+.submitbutton{
+  display: block;
+  color: #FFF;
+  background-color: #11c1f3;
+}
+
+.forgot-pass {
+  position: relative;
+  color: #fff;
+  left: 50%;
+  transform: translate(-50%, 0);
+  margin-top: 20px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 1.4em;
+  text-decoration: none;
+}
+
+
+.color{
+background-color: red;
+}
+
+
+.red{
+    color:red;
+  }
+.green{
+    color:green;
+  }
+
+.kitap{
+    min-width: 150px;
+    font-size: 150%;
+    font-family:verdana;
+}
+
+.basla{
+    margin-top: 50% !important;
+    margin-bottom: 50% !important;
+    min-width: 50%;
+    min-height: 50%;
+}
+
+/* Empty. Add your own CSS if you like */
+.well-image{
+    width: 100%;
+    height: 162px;
+}
+.top-buffer{
+    margin-top: 30px;
+}
+.answer{
+    padding: 15px 20px;
+    border-radius: 10px;
+    border: 1px solid #bbb;
+}
+.answer:hover{
+    cursor: pointer;
+}
+.image-answer{
+    cursor: pointer;
+    height: 350px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.image-answer img{
+    width: 100%;
+    height: auto;
+}
+.image-selected{
+    border: 3px solid #56afdc;
+}
+.image-answer.bg-success{
+    border: 3px solid #5ea640;
+}
+.image-answer.bg-danger{
+    border: 3px solid #b74848;
+}
+
+.bg-info{
+    background-color:#d9edf7;
+}
+
+.bg-danger{
+    background-color:#f2dede;
+}
+
+.bg-success{
+    background-color:#5ea640;
+}
+
+.startbtn{
+    margin-top: 50%;
+}
+
+.btn-success{
+
+     background-color:#40ff00;
+}
+
+.icon-success{
+    background-color:#00bfff;
+}
+
+.icon-selected{
+background-color:#0028ff;
+}
+
+.btn-danger{
+    background-color:#ff0000;
+}
+.resulticon{
+
+    margin: 1px;
+    padding: 0px !important;
+}
+
+.marginquestion{
+    margin-bottom: 2px !important;
+    margin-top: 5px;
+}
+
+.questioncard {
+  border: solid 2px black !important;
+}
+
+.finalisecard {
+  border: solid 2px red !important;
+}
+
+.geributton{
+    margin-left: 10px;
+}
+
+.texttype{
+   font-family:verdana;
+   color: #fff;
+}
+
+.orange{
+    color: orange;
+}
+
+
