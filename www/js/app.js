@@ -38,7 +38,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     };
 
   window.plugins.OneSignal
-    .startInit("240363a5-f313-4cb5-be1c-289a5dce1abb")
     .handleNotificationOpened(notificationOpenedCallback)
     .endInit();
     
