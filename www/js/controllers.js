@@ -259,7 +259,6 @@ $ionicPopup.alert({
 
     };
 
-        $scope.serviceLink = "https://www.kavurgam.com/services.php";
 
     $scope.postService = function (scopeName, sentData) {
 
