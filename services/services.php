@@ -9,12 +9,6 @@
  include("class.phpmailer.php");
  include("class.smtp.php");
 
-// $jsonDeneme ->phone_number ="05511716961";
-//  $jsonDeneme ->email_address = "asd";
-// $jsonDeneme ->service_type ="forgot_password";
-//  $jsonDeneme ->name_user = "ads";
-//  $jsonDeneme ->school="asd";
-//  $jsonDeneme ->company_id="12";
 
 //$gelen_json = json_encode($jsonDeneme);
 
@@ -24,49 +18,7 @@ $gelen_data = json_decode($gelen_json);
 $service_type = $gelen_data->service_type;
 
 
-// echo $myJson;
-//login_user($pdo,$myJson);
-//-----------------------------------------------------------------
-switch($service_type){
-  case get_kitap:
-    get_kitap($pdo, $gelen_data);
-    break;
-    case get_level:
-    get_level($pdo, $gelen_data);
-    break;
-  case get_soru:
-    get_soru($pdo,$gelen_data);
-    break;
-  case register_levelpuan:
-    register_levelpuan($pdo,$gelen_data);
-    break;
-  case login_user:
-    login_user($pdo,$gelen_data);
-    break;
-  case register_user:
-    register_user($pdo, $gelen_data);
-    break;
-  case user_varMi:
-    user_varMi($pdo,$gelen_data);
-    break;
-  case mail_varMi:
-    mail_varMi($pdo,$gelen_data);
-    break;
-  case tel_varMi:
-    tel_varMi($pdo,$gelen_data);
-    break;
-   case forgot_password:
-    forgot_password($pdo,$gelen_data);
-    break;
-  case update_puan:
-    update_puan($pdo,$gelen_data);
-    break;
-  case get_puan:
-    get_puan($pdo,$gelen_data);
-    break;
-  default:
-    echo $service_type."Switch 0";
-}
+
 
 
 function login_user($pdo, $gelen_data){
@@ -119,7 +71,7 @@ function get_puan($pdo,$gelen_data){
 function forgot_password($pdo, $gelen_data){
   //echo "Fonksiyona girdi";
   $phone_number = $gelen_data->phone_number;
-  $stmt = $pdo->prepare("SELECT name_user,password_user,email_address, username FROM user WHERE phone_number=:phone_number");
+  $stmt = $pdo->prepare("SELECT name_user,password_user,email_a FROM user WHERE phone_number=:phone_number");
   $stmt->bindParam(':phone_number', $phone_number, PDO::PARAM_STR);
   $stmt->execute();
 
@@ -134,12 +86,8 @@ function forgot_password($pdo, $gelen_data){
   $mail->Host = 'smtp.gmail.com';
   $mail->Port = 587;
   $mail->SMTPSecure = 'tls';
-  $mail->Username = 'tahririapp@gmail.com';
-  $mail->Password = '+-Muzaffer1997';
-  $mail->SetFrom($mail->Username, 'Tahriri App');
-  $mail->AddAddress($email_address, $name_user);
-  $mail->CharSet = 'UTF-8';
-  $mail->Subject = 'Şifre İsteği';
+
+
   $content = '
         <div style="background-color:#f2f3f5;padding:20px">
             <div style="max-width:600px;margin:0 auto">
@@ -218,10 +166,6 @@ function forgot_password($pdo, $gelen_data){
 
  function update_puan($pdo,$gelen_data){
   echo "update_puan dayım tamamdır buradayım";
-  echo $gelen_data->kitappuan;
-  $user_id =$gelen_data->user_id;
-  $puan=$gelen_data->puan;
-  $kitappuan = $gelen_data->kitappuan;
 
   if($kitappuan==emsile_puan){
       $stmt = $pdo->prepare("UPDATE `user` SET `emsile_puan`=($puan+emsile_puan) WHERE `user_id`=$user_id");
