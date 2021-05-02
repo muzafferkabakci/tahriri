@@ -1,2 +1,2 @@
-# tahriri
-tahririi app made with ionic
+# Tahriri
+Tahriri is a mobile application made with ionic.
